@@ -1,0 +1,8 @@
+{{ define "title" }}
+{{ site.Title }} | blog
+{{ end }}
+
+{{ define "main" }}
+{{ partial "blog/hero.html" . }}
+{{ partial "blog/post-list.html" . }}
+{{ end }}

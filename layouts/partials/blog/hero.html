@@ -1,0 +1,19 @@
+{{ $date   := dateFormat "2006-01-02" .Date }}
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title is-size-1 is-size-2-mobile has-text-black has-text-black-light">
+        {{ .Title }}
+      </h1>
+      
+      {{ if ne .RelPermalink "/blog/" }}
+      <p class="is-size-5 has-text-black-ter">
+        {{ $date }}
+      </p>
+
+      <br />
+
+      {{ end }}
+    </div>
+  </div>
+</section>

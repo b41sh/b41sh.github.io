@@ -1,0 +1,15 @@
+{{ $posts := where site.RegularPages "Section" "blog" }}
+<section class="section">
+  {{ range $posts }}
+  <div class="container">
+    <div class="columns">
+      <div class="column is-2">
+        <h2 class="subtitle">{{ .Date.Format "2006-01-02" }}</h2>
+      </div>
+      <div class="column">
+        <h1 class="title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</section>

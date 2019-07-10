@@ -1,0 +1,5 @@
+{{ $css     := site.Params.assets.css }}
+{{ range $css }}
+{{ $path := printf "css/%s.css" . | relURL }}
+<link rel="stylesheet" href="{{ $path }}">
+{{ end }}

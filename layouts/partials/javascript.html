@@ -1,0 +1,14 @@
+<script type="text/javascript">
+function navbarToggle() {
+  const burger = document.querySelector('.navbar-burger');
+  const menu = document.querySelector('.navbar-menu');
+  burger.addEventListener('click', event => {
+    burger.classList.toggle("is-active");
+    menu.classList.toggle("is-active");
+  });
+}
+(function() {
+  navbarToggle();
+  console.log("Welcome to baishen.me!");
+})();
+</script>

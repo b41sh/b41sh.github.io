@@ -1,0 +1,18 @@
+title = "baishen"
+baseurl = "https://baishen.me"
+languageCode = "zh-CN"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+favicon = "favicon.png"
+googleAnalyticsId = "UA-143445286-1"
+
+[params.assets]
+css = ["style", "syntax"]
+js  = []
+
+[params.socialmedia]
+twitter = "https://twitter.com/b41sh"
+github  = "https://github.com/b41sh"
