@@ -1,18 +1,23 @@
 title = "baishen"
-baseurl = "https://baishen.me"
+baseurl = "https://baishen.me/"
+enableEmoji = true
+defaultContentLanguage = "zh"
 languageCode = "zh-CN"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 pygmentsCodeFences = true
 pygmentsUseClasses = true
+enableRobotsTXT = true
+canonifyURLs = true
 
 [params]
-favicon = "favicon.png"
-googleAnalyticsId = "UA-143445286-1"
+  author = "Baishen"
+  description = "Baishen's Personal Hugo Site"
+  googleAnalyticsId = "UA-143445286-1"
 
 [params.assets]
-css = ["style", "syntax"]
-js  = []
+  css = ["style", "syntax"]
+  js  = []
 
 [params.socialmedia]
-twitter = "https://twitter.com/b41sh"
-github  = "https://github.com/b41sh"
+  twitter = "https://twitter.com/b41sh"
+  github  = "https://github.com/b41sh"
