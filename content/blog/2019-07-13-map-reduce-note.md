@@ -1,9 +1,13 @@
 ---
 title: "Map Reduce笔记"
+description: MapReduce是一个编程模型，用于大规模数据集（大于1TB）的并行运算
 date: '2019-07-13'
 tags:
   - papers
   - google
+keywords:
+  - Distributed System
+  - Google
 ---
 
 ## 1 介绍(Introduction)
