@@ -46,7 +46,7 @@ to scale to a very large size: petabytes of data across thousands of commodity s
 ##### 行(Rows)
 
 - row key 是任意字符串，最大64kb
-- 的读写都是原子操作
+- 读写都是原子操作
 - 按字典序组织数据
 - 每个 row 都可以动态分区，每个分区叫一个 tablet
 
@@ -74,7 +74,8 @@ to scale to a very large size: petabytes of data across thousands of commodity s
 - 允许 cell 做为计数器
 - 允许在服务器地址空间内执行脚本 [Sawzall]
 
-```
+写流程
+```c
 // Open the table
 Table *T = OpenOrDie("/bigtable/web/webtable");
 // Write a new anchor and delete an old anchor
@@ -85,7 +86,8 @@ Operation op;
 Apply(&op, &r1);
 ```
 
-```
+读流程
+```c
 Scanner scanner(T);
 ScanStream *stream;
 stream = scanner.FetchColumnFamily("anchor");
@@ -143,7 +145,7 @@ tablet server
 - root tablet 存储 METADATA table 的所有 tablet 位置
 - 每个 METADATA tablet 存储一组 user tablet 位置
 - root tablet 是 METADATA table 的第一个 tablet，永远不会分裂
-- METADATA table 的每一个 row key（由 tablet 标识和它的 end row 组成）存储一个 tablet 的位置存储在
+- METADATA table 的每一个 row key（由 tablet 标识和它的 end row 组成）存储一个 tablet 的位置
 - client 缓存 tablet 的位置，过期时从头开始遍历，最多需要读6次
 - 二级信息（log，用于调试和性能分析）也存储在 METADATA table
 
