@@ -5,8 +5,8 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "bulma": "^0.7.5",
-    "node-sass": "^4.12.0"
+    "bulma": "^0.8.0",
+    "node-sass": "^4.13.1"
   },
   "scripts": {
     "css-build": "node-sass --omit-source-map-url --output-style=compressed static/sass/style.sass static/css/style.css",
