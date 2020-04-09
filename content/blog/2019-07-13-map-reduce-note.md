@@ -123,7 +123,7 @@ Google 内部广泛使用的运行环境
 
 MapReduce 执行流程
 
-1. 将文件分为 M 个数据片段，每个 16MB - 64MB(可配置)，在集群中创建大量副本
+1. 将文件分为 M 个数据片段，每个 16MB - 64MB(可配置)，接着在集群中创建程序副本并启动执行
 2. master 分配 map task 或 reduce task 给一个空闲的 worker
 3. map worker 读取输入数据，解析出 key/value pair，传递给用户的 Map 函数，输出中间 key/value pair，存储在内存中
 4. key/value pair 通过分区函数分为 R 个区域，周期性的写入到本地磁盘，把位置回传给 master
